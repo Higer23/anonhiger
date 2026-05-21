@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Seite nicht gefunden | Nachrichtenportal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0c10;
+      --surface: rgba(16, 20, 30, 0.75);
+      --border: rgba(201, 168, 76, 0.25);
+      --gold: #c9a84c;
+      --text: #e8e2d5;
+      --muted: #6b6f7e;
+      --radius: 16px;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      overflow: hidden;
+    }
+    body::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 50%, rgba(201, 168, 76, 0.08) 0%, transparent 80%);
+      pointer-events: none; z-index: 0;
+    }
+    .container {
+      position: relative; z-index: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: var(--radius);
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      max-width: 480px; width: 100%;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .monogram {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, var(--gold), #a18131);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; color: var(--bg); font-weight: 700;
+      box-shadow: 0 8px 24px rgba(201, 168, 76, 0.3);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; margin-bottom: 0.8rem;
+      letter-spacing: -0.01em; color: var(--gold);
+    }
+    p {
+      font-size: 0.95rem; line-height: 1.6; color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--gold), #a18131);
+      color: var(--bg);
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: opacity 0.2s, transform 0.1s;
+      box-shadow: 0 4px 12px rgba(201,168,76,0.2);
+    }
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  </style>
+  <script>
+    // Automatically redirect back to the home directory if routed incorrectly on GitHub Pages
+    setTimeout(() => {
+      window.location.href = './';
+    }, 6000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="monogram">404</div>
+    <h1>Seite nicht gefunden</h1>
+    <p>Die gesuchte Seite existiert nicht oder wurde verschoben. Sie werden in wenigen Sekunden automatisch auf das Nachrichtenportal zurückgeleitet.</p>
+    <a href="./" class="btn">Sofort zurückkehren</a>
+  </div>
+</body>
+</html>

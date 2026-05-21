@@ -1,0 +1,26 @@
+{
+  "name": "Nachrichtenportal",
+  "short_name": "Nachrichten",
+  "description": "Sende mir direkt eine Nachricht – Freiherr-vom-Stein Gymnasium",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0c10",
+  "theme_color": "#c9a84c",
+  "orientation": "portrait-primary",
+  "lang": "de",
+  "categories": ["communication"],
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=192&h=192&fit=crop&q=80",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=512&h=512&fit=crop&q=80",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nachrichtenportal - Freiherr-vom-Stein Gymnasium</title>
+    
+    <!-- PWA Setup Metas -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#C5A059" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Nachrichten" />
+    
+    <!-- iOS Icons and Fallbacks -->
+    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=180&h=180&fit=crop&q=80" />
+    <link rel="icon" type="image/png" sizes="192x192" href="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=192&h=192&fit=crop&q=80" />
+    <link rel="icon" type="image/png" sizes="512x512" href="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=512&h=512&fit=crop&q=80" />
+    
+    <!-- Service Worker registration tracker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('[System Cache] SW Registered in path:', reg.scope))
+            .catch(err => console.warn('[System Cache] SW Registration failed:', err));
+        });
+      }
+    </script>
+  </head>
+  <body class="bg-[#0a0a0c] text-[#e5e5e7]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
