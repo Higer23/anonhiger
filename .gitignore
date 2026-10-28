@@ -6,3 +6,8 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Keep local secrets out of git
+.env
+.env.*
+.env*.local
