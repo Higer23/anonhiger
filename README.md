@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# anonhiger
 
-# Run and deploy your AI Studio app
+A React app for sending anonymous messages, with a form that offers templates and AI-assisted text suggestions through the Gemini API.
 
-This contains everything you need to run your app locally.
+## English
 
-View your app in AI Studio: https://ai.studio/apps/3b5e8f1d-d811-4661-827e-94fe60d2d372
+**Features:** message form with templates (GlassForm.tsx), client information indicator, history panel (HistoryPanel.tsx), and deployment help (HowToDeploy.tsx).
 
-## Run Locally
+**Stack:** React 19, Vite, Tailwind CSS, @google/genai.
 
-**Prerequisites:**  Node.js
+**Setup**
+1. npm install
+2. Copy .env.example to .env.local and set GEMINI_API_KEY.
+3. npm run dev and open the printed address.
 
+**Build:** npm run build. Type check: npm run lint.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deutsch
+
+**Funktionen:** Formular fuer anonyme Nachrichten mit Vorlagen (GlassForm.tsx), Anzeige der Client-Informationen, Verlauf (HistoryPanel.tsx) und Hilfe zur Bereitstellung (HowToDeploy.tsx).
+
+**Technik:** React 19, Vite, Tailwind CSS, @google/genai.
+
+**Einrichtung**
+1. npm install
+2. .env.example nach .env.local kopieren und GEMINI_API_KEY eintragen.
+3. npm run dev ausfuehren und die angezeigte Adresse oeffnen.
+
+**Build:** npm run build. Typpruefung: npm run lint.
+
+## Türkçe
+
+**Özellikler:** Şablonlu anonim mesaj formu (GlassForm.tsx), istemci bilgisi göstergesi, geçmiş paneli (HistoryPanel.tsx) ve yayınlama yardımı (HowToDeploy.tsx).
+
+**Teknoloji:** React 19, Vite, Tailwind CSS, @google/genai.
+
+**Kurulum**
+1. npm install
+2. .env.example dosyasını .env.local olarak kopyalayın ve GEMINI_API_KEY değerini girin.
+3. npm run dev çalıştırın ve çıkan adresi açın.
+
+**Derleme:** npm run build. Tip kontrolü: npm run lint.
